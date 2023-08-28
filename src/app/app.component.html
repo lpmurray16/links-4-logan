@@ -1,23 +1,65 @@
 <h2>Favorites<i class="fa-solid fa-star"></i></h2>
 <div class="section static">
-  <a target="_blank" rel="noreferrer noopener" class="favorite"
-    >FLYB Local<i class="fa-solid fa-house-laptop"></i
-  ></a>
+  <ng-container *ngFor="let link of links">
+    <ng-container *ngIf="link.section === 'favorites'">
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        class="favorite"
+        href="{{ link.url }}"
+      >
+        {{ link.title }}<i class="{{ link.icon }}"></i>
+      </a>
+    </ng-container>
+  </ng-container>
 </div>
 
 <h2>Other<i class="fa-solid fa-grip"></i></h2>
 <div class="section static">
-  <a target="_blank" rel="noreferrer noopener" class="favorite other">Test</a>
+  <ng-container *ngFor="let link of links">
+    <ng-container *ngIf="link.section === 'others'">
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        class="favorite"
+        href="{{ link.url }}"
+      >
+        {{ link.title }}<i class="{{ link.icon }}"></i>
+      </a>
+    </ng-container>
+  </ng-container>
 </div>
 
 <h2>Servers<i class="fa-solid fa-server"></i></h2>
 <div class="section static">
-  <a target="_blank" rel="noreferrer noopener" class="favorite other">Test</a>
+  <ng-container *ngFor="let link of links">
+    <ng-container *ngIf="link.section === 'servers'">
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        class="favorite"
+        href="{{ link.url }}"
+      >
+        {{ link.title }}<i class="{{ link.icon }}"></i>
+      </a>
+    </ng-container>
+  </ng-container>
 </div>
 
 <h2>Personal<i class="fa-solid fa-grip"></i></h2>
 <div class="section static">
-  <a target="_blank" rel="noreferrer noopener" class="favorite other">Test</a>
+  <ng-container *ngFor="let link of links">
+    <ng-container *ngIf="link.section === 'personal'">
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        class="favorite"
+        href="{{ link.url }}"
+      >
+        {{ link.title }}<i class="{{ link.icon }}"></i>
+      </a>
+    </ng-container>
+  </ng-container>
 </div>
 
 <div id="floating-button" (click)="openModal()" class="floating-button">+</div>
