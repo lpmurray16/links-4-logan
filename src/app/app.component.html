@@ -1,0 +1,54 @@
+<h2>Favorites<i class="fa-solid fa-star"></i></h2>
+<div class="section static">
+  <a target="_blank" rel="noreferrer noopener" class="favorite"
+    >FLYB Local<i class="fa-solid fa-house-laptop"></i
+  ></a>
+</div>
+
+<h2>Other<i class="fa-solid fa-grip"></i></h2>
+<div class="section static">
+  <a target="_blank" rel="noreferrer noopener" class="favorite other">Test</a>
+</div>
+
+<h2>Servers<i class="fa-solid fa-server"></i></h2>
+<div class="section static">
+  <a target="_blank" rel="noreferrer noopener" class="favorite other">Test</a>
+</div>
+
+<h2>Personal<i class="fa-solid fa-grip"></i></h2>
+<div class="section static">
+  <a target="_blank" rel="noreferrer noopener" class="favorite other">Test</a>
+</div>
+
+<div id="floating-button" (click)="openModal()" class="floating-button">+</div>
+
+<div id="modal" class="modal" [class.open]="modalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <form id="link-form">
+      <label for="section">Choose a section:</label>
+      <select id="section" name="section">
+        <option value="favorites">Favorites</option>
+        <option value="other">Other</option>
+        <option value="servers">Servers</option>
+      </select>
+
+      <label for="url">URL:</label>
+      <input type="text" id="url" name="url" placeholder="Enter URL" />
+
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" placeholder="Enter title" />
+
+      <label for="icon">Icon:</label>
+      <input
+        type="text"
+        id="icon"
+        name="icon"
+        placeholder="Enter FontAwesome class, e.g., fa-solid fa-plus"
+      />
+      <div class="submit">
+        <a class="favorite other" (click)="addLink()">Add Link</a>
+      </div>
+    </form>
+  </div>
+</div>

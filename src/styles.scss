@@ -2,6 +2,7 @@
 /* Set default font families here if needed */
 
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
 :root {
   --jet: #312f2f;
@@ -23,7 +24,6 @@
   flex-direction: column;
   margin: 30px auto;
   font-family: "Press Start 2P", cursive;
-  /* Changed from 'Fira Sans', sans-serif */
   color: var(--plum-web);
   min-height: 100vh;
   height: 100%;
@@ -67,15 +67,11 @@ h2 {
   text-decoration: none;
   transition: all 0.3s ease;
   min-width: 100px;
-  /* Set minimum width */
-  /* Removed fixed width and height */
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, 0.35);
   overflow: hidden;
-  /* Added for the sliding background */
   position: relative;
-  /* Added for the sliding background */
 }
 
 .favorite i,
@@ -120,13 +116,7 @@ h2 i {
 
 .favorite.other:hover {
   transform: scale(1.05);
-  /* Grows the element to 105% of its original size */
-  box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.5),
-    /* Existing Shadow */ 0 0 25px var(--coral);
-  /* Glow */
-
-  /* Other properties for hover effect */
-  /* These colors are opposite to your sliding background */
+  box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.5), 0 0 25px var(--coral);
   background: var(--royal-purple);
   color: var(--coral);
   border: 2px solid var(--coral);
@@ -136,21 +126,14 @@ h2 i {
 
 .favorite:hover {
   transform: scale(1.05);
-  /* Grows the element to 105% of its original size */
   box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.5),
-    /* Existing Shadow */ 0 0 25px var(--royal-purple);
-  /* Glow */
-
-  /* Other properties for hover effect */
-  /* These colors are opposite to your sliding background */
+    0 0 25px var(--royal-purple);
   background: var(--coral);
   color: var(--royal-purple);
   border: 2px solid var(--royal-purple);
   padding: 30px;
   cursor: pointer;
 }
-
-/* Existing CSS Code */
 
 /* Floating Plus Button */
 .floating-button {
@@ -177,6 +160,9 @@ h2 i {
   overflow: auto;
   z-index: 1;
 }
+.open {
+  display: block;
+}
 
 .modal-content {
   background-color: var(--jet);
@@ -192,8 +178,6 @@ h2 i {
   font-size: 28px;
   cursor: pointer;
 }
-
-/* Existing CSS Code */
 
 /* Updated Style for Form Labels and Inputs */
 .modal-content label {
@@ -222,6 +206,9 @@ h2 i {
 .modal-content select option {
   background-color: var(--royal-purple);
   color: var(--coral);
+  font-size: 2em;
+  padding: 6px;
+  font-family: "Press Start 2P", cursive !important;
 }
 
 /* Styles for hover and focus states */
@@ -233,17 +220,10 @@ h2 i {
 }
 
 .submit {
-  width: 100%;
+  width: 200px;
   margin: 20px auto;
   text-align: center;
-}
-
-#submit-link {
-  border: 2px solid var(--royal-purple);
-  background: var(--coral);
-  font-family: "Press Start 2P", cursive;
-  color: var(--royal-purple);
-  padding: 15px 25px;
-  border-radius: 4px;
-  cursor: pointer;
+  & > a {
+    font-family: "Press Start 2P", cursive !important;
+  }
 }
